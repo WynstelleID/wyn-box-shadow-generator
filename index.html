@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wynstelle Box Shadow Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="box-container">
+        <div class="box"></div>
+      </div>
+
+      <div class="card-input">
+        <div class="inputs">
+          <div class="sliders">
+            <label for="">Horizontal Length</label>
+            <input
+              type="range"
+              min="-50"
+              max="50"
+              id="x"
+              value="0"
+              oninput="start()"
+            />
+            <label for="">Vertical Length</label>
+            <input
+              type="range"
+              min="-50"
+              max="50"
+              id="y"
+              value="0"
+              oninput="start()"
+            />
+            <label for="">Blur</label>
+            <input
+              type="range"
+              min="0"
+              max="50"
+              id="blur"
+              value="0"
+              oninput="start()"
+            />
+          </div>
+
+          <div class="color-box">
+            <label for="">Color</label>
+            <input type="color" value="000" id="color" oninput="start()" />
+          </div>
+        </div>
+        <div class="shadow-text">box-shadow: 0 0 0 #000;</div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

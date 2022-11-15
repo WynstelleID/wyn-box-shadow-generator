@@ -1,0 +1,129 @@
+body {
+  background-color: #323d4d;
+}
+
+:root {
+  --x: 0px;
+  --y: 0px;
+  --blur: 0px;
+  --color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+
+.main-container {
+  width: 330px;
+  background-color: #858585;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 330px;
+  grid-template-rows: 250px 200px;
+  overflow: hidden;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.box {
+  width: 170px;
+  height: 170px;
+  background: #542cdd;
+  border-radius: 12px;
+  box-shadow: var(--x) var(--y) var(--blur) var(--color);
+}
+
+.card-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliders {
+  width: 225px;
+  height: 130px;
+  padding: 2rem 21px;
+}
+
+label {
+  font-family: "vrela Round", sans-serif;
+  font-size: 16px;
+}
+
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #e0e0e0;
+  outline: none;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #542cdd;
+  border-radius: 50%;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  margin: 5px 0;
+  border-radius: 50%;
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.shadow-text {
+  width: 268px;
+  padding: 10px;
+  background: #e0e0e0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  font-family: "Varela Round", sans-serif;
+  font-size: 13px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
